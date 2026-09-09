@@ -1,177 +1,147 @@
-/* ===== GENERAL PAGE ===== */
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f0ff, #ffffff);
-    color: #2d2340;
-}
-
-/* ===== HEADER ===== */
-header {
-    background: linear-gradient(135deg, #6c3fc5, #8e5de7);
-    color: white;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(108, 63, 197, 0.25);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
-header p {
-    margin: 8px 0 0;
-    opacity: 0.9;
-}
-
-/* ===== MAIN CONTAINER ===== */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
-}
-
-/* ===== CARDS / SECTIONS ===== */
-.card,
-section {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 18px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 25px rgba(80, 50, 120, 0.12);
-    border: 1px solid #eee5ff;
-}
-
-h2 {
-    color: #633bb5;
-    margin-top: 0;
-}
-
-/* ===== INPUTS ===== */
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 15px;
-    border: 1px solid #d8c9f5;
-    border-radius: 10px;
+    min-height: 100vh;
+    padding: 40px 20px;
     box-sizing: border-box;
-    font-size: 15px;
-    outline: none;
-    background: #faf8ff;
+
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eee9ff, #f8f7ff);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #252044;
 }
 
-input:focus,
-select:focus {
-    border-color: #7b4dcc;
-    box-shadow: 0 0 0 3px rgba(123, 77, 204, 0.12);
+
+/* =========================
+   MAIN HEADING
+   ========================= */
+
+h1 {
+    margin: 0 0 30px 0;
+    font-size: 36px;
+    color: #4b2aad;
+    text-align: center;
 }
 
-/* ===== BUTTONS ===== */
-button {
-    background: linear-gradient(135deg, #6c3fc5, #8e5de7);
-    color: white;
-    border: none;
-    padding: 12px 20px;
+
+/* =========================
+   INPUT FIELDS
+   ========================= */
+
+input {
+    width: 350px;
+    max-width: 90vw;
+    padding: 14px 16px;
+    margin: 8px 0;
+
+    border: 2px solid #d8d0f5;
     border-radius: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.2s;
+
+    background-color: white;
+    font-size: 16px;
+
+    outline: none;
+    box-sizing: border-box;
+
+    transition: 0.3s;
 }
+
+
+/* When the user clicks inside an input */
+
+input:focus {
+    border-color: #6c45d9;
+    box-shadow: 0 0 8px rgba(108, 69, 217, 0.25);
+}
+
+
+/* Placeholder text */
+
+input::placeholder {
+    color: #999;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+    border: none;
+    border-radius: 10px;
+
+    padding: 13px 28px;
+    margin: 15px 5px;
+
+    background: linear-gradient(135deg, #5935c7, #7b55df);
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(75, 42, 173, 0.25);
+
+    transition: 0.3s;
+}
+
+
+/* Button when the mouse is over it */
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(108, 63, 197, 0.25);
+    box-shadow: 0 8px 18px rgba(75, 42, 173, 0.35);
 }
+
+
+/* Button when clicked */
 
 button:active {
     transform: translateY(0);
 }
 
-/* ===== TABLE ===== */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow: hidden;
+
+/* =========================
+   RESULT
+   ========================= */
+
+p {
+    min-width: 300px;
+    max-width: 90vw;
+
+    padding: 18px 25px;
+    margin: 10px 0;
+
     border-radius: 12px;
-}
 
-th {
-    background: #6c3fc5;
-    color: white;
-    padding: 14px;
-    text-align: left;
-}
+    background-color: #e9e3ff;
+    color: #42259c;
 
-td {
-    padding: 13px;
-    border-bottom: 1px solid #eee7fa;
-}
+    font-size: 20px;
+    font-weight: bold;
 
-tr:nth-child(even) {
-    background: #faf8ff;
-}
-
-tr:hover {
-    background: #f1eaff;
-}
-
-/* ===== DELETE BUTTON ===== */
-.delete-btn {
-    background: #e0527b;
-    padding: 8px 12px;
-    font-size: 13px;
-}
-
-.delete-btn:hover {
-    background: #c93b64;
-}
-
-/* ===== SEARCH BAR ===== */
-#search {
-    border-radius: 25px;
-    padding: 14px 18px;
-    border: 1px solid #d8c9f5;
-}
-
-/* ===== FOOTER ===== */
-footer {
     text-align: center;
-    padding: 20px;
-    color: #756889;
-    font-size: 14px;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 700px) {
-    .container {
-        width: 94%;
-    }
 
-    .card,
-    section {
-        padding: 18px;
-    }
+/* =========================
+   DAYS AND MONTHS
+   ========================= */
 
-    header h1 {
-        font-size: 24px;
-    }
+h2 {
+    margin: 30px 0 5px 0;
 
-    table {
-        font-size: 13px;
-    }
+    font-size: 28px;
+    color: #30205f;
 
-    th,
-    td {
-        padding: 9px;
-    }
-
-    button {
-        width: 100%;
-        margin-top: 5px;
-    }
+    text-align: center;
 }
